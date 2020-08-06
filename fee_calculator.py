@@ -50,6 +50,7 @@ def print_amount(amount):
 
 
 endpoint = "https://ctz.solidwallet.io"
+# endpoint = "https://bicon.net.solidwallet.io"
 
 icx_mount = float(sys.argv[1:][0])
 icx_mount_hex = hex(icx_to_wei(icx_mount))
@@ -94,5 +95,5 @@ print(f" - step_price : {step_price} ({hex_to_int(step_price)})")
 print("-"*100)
 
 fee = hex_to_int(estimate_step) * hex_to_int(step_price)
-print(f"fee = {hex(fee)} = {estimate_step} (estimate_step) * {step_price} (step_price) ")
+print(f"fee = {hex(fee)}({fee}) = {estimate_step} (estimate_step) * {step_price} (step_price) ")
 
